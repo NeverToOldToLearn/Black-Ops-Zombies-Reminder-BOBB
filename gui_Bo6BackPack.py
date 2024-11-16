@@ -20,6 +20,9 @@ root = tk.Tk()
 root.title("gui_Bo6BackPack")
 root.attributes("-topmost", True)
 
+# Make the background transparent (0 is fully transparent)
+root.wm_attributes("-alpha", 0.85)
+
 # Make the GUI draggable
 def start_drag(event):
     x = event.x
@@ -47,7 +50,7 @@ entry_z.grid(row=2, column=1)
 calculate_button = tk.Button(root, text="Calculate", command=calculate_results)
 calculate_button.grid(row=3, columnspan=2)
 
-# Explanation Label (using grid)
+# Explanation Label
 explanation = tk.Label(root, text="*Symbol Guide: Find the shapes, and look to the left for the first number. "
                                   "Then look down vertically from that same image, and find the next number. "
                                   "Add them together and fill them in.", wraplength=300)
@@ -57,14 +60,19 @@ explanation.grid(row=4, column=0, columnspan=2)
 result_label = tk.Label(root, text="")
 result_label.grid(row=5, columnspan=2)
 
-# Slot number entries
+# Slot number entries with labels
 tk.Label(root, text="Enter slot numbers:").grid(row=6, column=0, columnspan=2)
-entry1 = tk.Entry(root, width=3)
-entry2 = tk.Entry(root, width=3)
-entry3 = tk.Entry(root, width=3)
-entry1.grid(row=7, column=0)
-entry2.grid(row=7, column=1)
-entry3.grid(row=7, column=2)
+tk.Label(root, text="Clock").grid(row=7, column=0)
+entry1 = tk.Entry(root, width=5)
+entry1.grid(row=8, column=0, pady=(0, 5))
+
+tk.Label(root, text="Playcard").grid(row=9, column=0)
+entry2 = tk.Entry(root, width=5)
+entry2.grid(row=10, column=0, pady=(0, 5))
+
+tk.Label(root, text="Days Without Accident").grid(row=11, column=0)
+entry3 = tk.Entry(root, width=5)
+entry3.grid(row=12, column=0, pady=(0, 5))
 
 # Start the GUI event loop
 root.mainloop()
