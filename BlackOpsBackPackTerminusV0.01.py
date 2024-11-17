@@ -78,10 +78,10 @@ parts_frame.grid(row=3, column=0, padx=5, pady=5)
 
 # Checkbox opties
 part_items = [
-    "1st Boss - EMF-Fob", "1st Boss - Injector", "1st Boss - AMP-Munition",
-    "Main Boss - Key-Card", "Main Boss - Com-Room PC", "Main Boss - Pipes",
-    "Main Boss - Hacking Device", "HackBuoys 1", "HackBuoys 2",
-    "HackBuoys 3", "Bomb Defusion"
+    "EMF-Fob", "Injector", "AMP-Munition", "HardDrive",
+    "Nathan Key-Card", "Com-Room PC", "Repair-Pipes",
+    " (Peck) Hacking Device", "HackBuoys 1", "HackBuoys 2",
+    "HackBuoys 3", "Bomb Defusion", "Ready up and start main boss" 
 ]
 
 # Maak checkboxes voor onderdelen
